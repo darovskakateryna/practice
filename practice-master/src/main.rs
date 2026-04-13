@@ -1,7 +1,9 @@
 pub mod hackerrank {
-    pub mod task03;
-    pub mod task04;
-    pub mod task05;
+    pub mod task03staircase;
+    pub mod task04grading;
+    pub mod task05applesnoranges;
+    pub mod task06kangaroo;
+    pub mod task07betweentwosets;
 }
 fn main() {
     println!("Hello, world!");
