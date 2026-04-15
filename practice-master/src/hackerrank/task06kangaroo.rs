@@ -1,15 +1,12 @@
 // https://www.hackerrank.com/challenges/kangaroo/problem
 pub fn kangaroo(x1: i32, v1: i32, x2: i32, v2: i32) -> String {
-    if v1 <= v2 {
-        return String::from("NO");
-    }
-
-    if (x2 - x1) % (v1 - v2) == 0 {
-        String::from("YES")
+    if v1 > v2 && (x2 - x1) % (v1 - v2) == 0 {
+        "YES".to_string()
     } else {
-        String::from("NO")
+        "NO".to_string()
     }
 }
+
 #[cfg(test)]
 mod tests {
     use super::*;

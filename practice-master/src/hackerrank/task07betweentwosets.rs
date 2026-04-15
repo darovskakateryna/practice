@@ -2,11 +2,12 @@
 pub fn gcd(a: i32, b: i32) -> i32 {
     if b == 0 { a } else { gcd(b, a % b) }
 }
-
+#[allow(dead_code)]
 fn lcm(a: i32, b: i32) -> i32 {
     if a == 0 || b == 0 { 0 } 
     else { (a * b).abs() / gcd(a, b) }
 }
+#[allow(dead_code)]
 #[allow(non_snake_case)]
 fn getTotalX(a: &[i32], b: &[i32]) -> i32 {
     let mut min_lcm = a[0];

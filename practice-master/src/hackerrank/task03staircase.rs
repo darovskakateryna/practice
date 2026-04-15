@@ -1,9 +1,9 @@
 // https://www.hackerrank.com/challenges/staircase/problem
 pub fn staircase(n: i32) {
+    let n = n as usize;
     for i in 1..=n {
-        let spaces = " ".repeat((n - i) as usize);
-        let hashes = "#".repeat(i as usize);
-        println!("{}{}", spaces, hashes);
+        let spaces = n - i;
+        println!("{:indent$}{:=>count$}", "", "", indent = spaces, count = i);
     }
 }
 

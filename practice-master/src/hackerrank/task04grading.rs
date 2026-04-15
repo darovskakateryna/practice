@@ -1,16 +1,8 @@
 // https://www.hackerrank.com/challenges/grading/problem
 pub fn grading_students(grades: &[i32]) -> Vec<i32> {
-    grades.iter().map(|&grade| {
-        if grade < 38 {
-            grade
-        } else {
-            let next_multiple_of_5 = ((grade / 5) + 1) * 5;
-            if next_multiple_of_5 - grade < 3 {
-                next_multiple_of_5
-            } else {
-                grade
-            }
-        }
+    grades.iter().map(|&g| match g {
+        g if g >= 38 && g % 5 >= 3 => g + (5 - g % 5),
+        _ => g,
     }).collect()
 }
 
